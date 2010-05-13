@@ -1,0 +1,8 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace rx "http://rx.reflex.io/2010";
+
+rx|Button {
+	behaviors: ClassReference("reflex.behaviors.DragBehavior");
+}

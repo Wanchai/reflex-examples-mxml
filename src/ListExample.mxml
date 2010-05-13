@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:rx="http://rx.reflex.io/2010" 
+				xmlns:example="examples.skins.*" 
+				xmlns:layouts="reflex.layouts.*" 
+				xmlns:flight="http://flight.flightxd.com/2009" 
+				xmlns:skins="reflex.skins.*">
+	
+	<fx:Declarations>
+		<flight:ArrayList id="testData">
+			<flight:source>
+				<fx:Object name="Test 1" />
+				<fx:Object name="Test 2" />
+				<fx:Object name="Test 3" />
+				<fx:Object name="Test 4" />
+				<fx:Object name="Test 5" />
+				<fx:Object name="Test 6" />
+				<fx:Object name="Test 7" />
+			</flight:source>
+		</flight:ArrayList>
+	</fx:Declarations>
+	
+	<rx:layout>
+		<rx:DockLayout />
+	</rx:layout>
+	
+	<rx:List dataProvider="{testData}" dock="center">
+		
+	</rx:List>
+	
+</rx:Application>

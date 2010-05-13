@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:rx="http://rx.reflex.io/2010" 
+			   xmlns:example="examples.skins.*" xmlns:layouts="reflex.layouts.*" xmlns:flight="http://flight.flightxd.com/2009"
+			   width="480" height="800">
+
+	<fx:Script>
+		<![CDATA[
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				event.currentTarget.style.dock = "center";
+			}
+		]]>
+	</fx:Script>
+	
+	<rx:layout>
+		<rx:HorizontalLayout />
+	</rx:layout>
+	
+	<rx:Button label="Hello Skinning 1" click="button1_clickHandler(event)" dock="top">
+		<rx:skin>
+			<example:ExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Hello Skinning 2" dock="bottom">
+		<rx:skin>
+			<example:ExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Hello Skinning 3" dock="right">
+		<rx:skin>
+			<example:ExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+</rx:Application>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
-	xmlns:rx="reflex.core.*" 
-	xmlns:c="reflex.controls.*">
-	<c:ListBox width="300" height="300" data="{['Test1', 'Test2', 'Test3']}" 
-		/>
-</rx:Application>

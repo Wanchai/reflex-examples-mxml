@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skins:Skin
+	xmlns:components="reflex.components.*"
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:skins="reflex.skins.*"
+	xmlns:tf="flash.text.*" xmlns:graphics="reflex.graphics.*" xmlns:states="reflex.states.*" xmlns:layouts="reflex.layouts.*" xmlns:display="reflex.display.*" 
+	>
+	<fx:Metadata>
+		[HostComponent("reflex.components.Button")]
+	</fx:Metadata>
+	
+	<skins:states>
+		<!--
+		<s:State name="up" />
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		-->
+	</skins:states>
+	<skins:layout>
+		<layouts:BasicLayout />
+	</skins:layout>
+	<graphics:Rect width="100" height="22">
+		<graphics:fill>
+			<mx:SolidColor color="#006699" />
+		</graphics:fill>
+	</graphics:Rect>
+	<display:ImageDisplay source="http://farm5.static.flickr.com/4049/4474882334_e48a635fac_m.jpg" />
+	<tf:TextField id="labelField" text="{(target as Object).label}" width="100" height="22" defaultTextFormat="{new TextFormat(null, null, 0xFFFFFF, true, null, null, null, null, 'center')}" />
+</skins:Skin>
