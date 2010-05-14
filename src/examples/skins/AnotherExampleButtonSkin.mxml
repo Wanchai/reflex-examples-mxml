@@ -22,7 +22,7 @@
 	<skins:layout>
 		<layouts:BasicLayout />
 	</skins:layout>
-	<graphics:Rect width="100" height="22">
+	<graphics:Rect width="{hostComponent.width}" height="{hostComponent.height}">
 		<graphics:fill>
 			<mx:SolidColor color="#006699" />
 		</graphics:fill>

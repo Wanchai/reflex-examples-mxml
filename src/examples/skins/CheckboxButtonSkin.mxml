@@ -22,10 +22,10 @@
 	<skins:layout>
 		<layouts:BasicLayout />
 	</skins:layout>
-	<graphics:Rect width="100" height="22">
+	<graphics:Rect x="2" y="4" width="10" height="10">
 		<graphics:fill>
-			<mx:SolidColor color="#006699" />
+			<mx:SolidColor color="{hostComponent.selected ? 0x000000 : 0x006699}" />
 		</graphics:fill>
 	</graphics:Rect>
-	<tf:TextField id="labelField" y="4" text="{hostComponent.label}" width="100" height="22" defaultTextFormat="{new TextFormat(null, null, 0xFFFFFF, true, null, null, null, null, 'center')}" />
+	<tf:TextField id="labelField" y="2" x="14" text="{(target as Object).label}" width="100" height="22" defaultTextFormat="{new TextFormat(null, null, 0x000000, true, null, null, null, null, 'center')}" />
 </skins:Skin>

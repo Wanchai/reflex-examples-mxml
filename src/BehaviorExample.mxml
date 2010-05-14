@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rx:Application 
 	xmlns:fx="http://ns.adobe.com/mxml/2009" 
-	xmlns:rx="http://rx.reflex.io/2010">
+	xmlns:rx="http://rx.reflex.io/2010" xmlns:behaviors="reflex.behaviors.*">
 	
 	<!--
 	In Reflex, component behavior is not baked into the code.
@@ -10,6 +10,7 @@
 	<rx:Button x="100" y="100">
 		<rx:behaviors>
 			<rx:ButtonBehavior />
+			<behaviors:MovieClipSkinBehavior />
 			<rx:DragBehavior />
 		</rx:behaviors>
 	</rx:Button>

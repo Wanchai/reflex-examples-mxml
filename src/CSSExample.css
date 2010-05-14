@@ -4,5 +4,6 @@
 @namespace rx "http://rx.reflex.io/2010";
 
 rx|Button {
-	behaviors: ClassReference("reflex.behaviors.DragBehavior");
+	/*behaviors: ClassReference("reflex.behaviors.DragBehavior");*/
+	skin: ClassReference("examples.skins.AnotherExampleButtonSkin");
 }

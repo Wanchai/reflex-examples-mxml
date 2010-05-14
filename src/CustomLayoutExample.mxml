@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:rx="http://rx.reflex.io/2010" 
+			   xmlns:layouts="examples.layouts.*" xmlns:skins="examples.skins.*">
+	
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<rx:layout>
+		<layouts:Grid960Layout />
+	</rx:layout>
+	
+	<rx:Button label="Hello Layouts 1" height="140" style="grid:12;suffix:12;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Hello Layouts 1" height="220" style="grid:7;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Hello Layouts 2" height="220" style="grid:5;suffix:24;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 1" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 2" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 3" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 4" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 5" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 6" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 7" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 8" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 9" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 10" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 11" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Link 12" style="grid:1;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	
+	<rx:Button label="Footer" height="60" style="grid:12;">
+		<rx:skin>
+			<skins:AnotherExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+</rx:Application>
