@@ -19,13 +19,17 @@
 		<s:State name="down"/>
 		-->
 	</skins:states>
+	
 	<skins:layout>
 		<layouts:BasicLayout />
 	</skins:layout>
-	<graphics:Rect x="2" y="4" width="10" height="10">
+	
+	<graphics:Rect width="10" height="10" left="2" verticalCenter="0">
 		<graphics:fill>
 			<mx:SolidColor color="{hostComponent.selected ? 0x000000 : 0x006699}" />
 		</graphics:fill>
 	</graphics:Rect>
-	<tf:TextField id="labelField" y="2" x="14" text="{(target as Object).label}" width="100" height="22" defaultTextFormat="{new TextFormat(null, null, 0x000000, true, null, null, null, null, 'center')}" />
+	
+	<display:Text id="label" left="14" right="2" verticalCenter="0" />
+	
 </skins:Skin>

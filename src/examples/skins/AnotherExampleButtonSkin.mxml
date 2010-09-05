@@ -6,6 +6,7 @@
 	xmlns:s="library://ns.adobe.com/flex/spark"
 	xmlns:skins="reflex.skins.*"
 	xmlns:tf="flash.text.*" xmlns:graphics="reflex.graphics.*" xmlns:states="reflex.states.*" xmlns:layouts="reflex.layouts.*" xmlns:display="reflex.display.*" 
+	xmlns:tl="flash.text.engine.*"
 	>
 	<fx:Metadata>
 		[HostComponent("reflex.components.Button")]
@@ -19,13 +20,18 @@
 		<s:State name="down"/>
 		-->
 	</skins:states>
+	
 	<skins:layout>
 		<layouts:BasicLayout />
 	</skins:layout>
-	<graphics:Rect width="{hostComponent.width}" height="{hostComponent.height}">
+	
+	<graphics:Rect left="0" right="0" top="0" bottom="0" radiusX="10" radiusY="10">
 		<graphics:fill>
 			<mx:SolidColor color="#006699" />
 		</graphics:fill>
+		<graphics:stroke>
+			<mx:SolidColorStroke color="#000000"  pixelHinting="true" />
+		</graphics:stroke>
 	</graphics:Rect>
-	<tf:TextField id="labelField" y="4" text="{hostComponent.label}" width="100" height="22" defaultTextFormat="{new TextFormat(null, null, 0xFFFFFF, true, null, null, null, null, 'center')}" />
+	
 </skins:Skin>

@@ -37,7 +37,7 @@ package examples.layouts
 				//gutterWidth = Math.max(columnWidth/3, 20);
 			}
 			
-			var size:Number = columnWidth*columnCount + gutterWidth*columnCount;
+			var size:Number = columnWidth*columnCount + gutterWidth*(columnCount-1);
 			var margin:Number = (rectangle.width - size)/2;
 			
 			var column:int = 0;

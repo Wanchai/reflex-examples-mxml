@@ -4,9 +4,9 @@
 			   xmlns:layouts="examples.layouts.*" xmlns:skins="examples.skins.*">
 	
 	
-	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
-	</fx:Declarations>
+	<!--
+		Reflex also supports the use of entirely custom layouts.
+	-->
 	
 	<rx:layout>
 		<layouts:Grid960Layout />
@@ -30,73 +30,73 @@
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 1" style="grid:1;">
+	<rx:Button label="Link 1" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 2" style="grid:1;">
+	<rx:Button label="Link 2" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 3" style="grid:1;">
+	<rx:Button label="Link 3" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 4" style="grid:1;">
+	<rx:Button label="Link 4" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 5" style="grid:1;">
+	<rx:Button label="Link 5" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 6" style="grid:1;">
+	<rx:Button label="Link 6" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 7" style="grid:1;">
+	<rx:Button label="Link 7" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 8" style="grid:1;">
+	<rx:Button label="Link 8" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 9" style="grid:1;">
+	<rx:Button label="Link 9" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 10" style="grid:1;">
+	<rx:Button label="Link 10" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 11" style="grid:1;">
+	<rx:Button label="Link 11" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:Button>
 	
-	<rx:Button label="Link 12" style="grid:1;">
+	<rx:Button label="Link 12" height="60" style="grid:1;">
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>

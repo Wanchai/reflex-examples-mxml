@@ -2,28 +2,44 @@
 <rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
 			   xmlns:rx="http://rx.reflex.io/2010" 
 			   xmlns:example="examples.skins.*" xmlns:layouts="reflex.layouts.*" xmlns:flight="http://flight.flightxd.com/2009"
-			   width="480" height="800" xmlns:components="com.bit101.components.*">
+			   width="480" height="800" xmlns:components="com.bit101.components.*" xmlns:components1="reflex.components.*" xmlns:behaviors="reflex.behaviors.*">
+	
+	<!--
+		In Reflex, a component's visual appearance is entirely defined by the skin
+		which may be reassigned at runtime. Skins can be a MovieClip or ISkin instance.
+	-->
 	
 	<rx:layout>
 		<rx:HorizontalLayout />
 	</rx:layout>
 	
-	<rx:Button label="Hello Skinning 1" width="120">
-		
+	<rx:Button label="Hello Skinning 1">
+		<rx:skin>
+			<components1:ButtonGraphic />
+		</rx:skin>
+		<rx:behaviors>
+			<rx:ButtonBehavior />
+			<behaviors:MovieClipSkinBehavior />
+		</rx:behaviors>
 	</rx:Button>
 	
-	<rx:Button label="Hello Skinning 2" width="120">
+	<rx:Button label="Hello Skinning 2">
 		<rx:skin>
 			<example:ExampleButtonSkin />
 		</rx:skin>
+		<rx:behaviors>
+			<rx:ButtonBehavior />
+		</rx:behaviors>
 	</rx:Button>
 	
 	<rx:Button label="Hello Skinning 3">
 		<rx:skin>
 			<example:CheckboxButtonSkin />
 		</rx:skin>
+		<rx:behaviors>
+			<rx:ButtonBehavior />
+			<rx:SelectableBehavior />
+		</rx:behaviors>
 	</rx:Button>
-	
-	<components:Knob />
 	
 </rx:Application>

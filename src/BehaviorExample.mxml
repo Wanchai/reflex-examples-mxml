@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rx:Application 
 	xmlns:fx="http://ns.adobe.com/mxml/2009" 
-	xmlns:rx="http://rx.reflex.io/2010" xmlns:behaviors="reflex.behaviors.*">
+	xmlns:rx="http://rx.reflex.io/2010" xmlns:behaviors="reflex.behaviors.*" xmlns:skins="examples.skins.*" xmlns:components="reflex.components.*">
 	
 	<!--
-	In Reflex, component behavior is not baked into the code.
-	User interactions are defined by reassignable "Behavior" classes.
+		In Reflex, component behavior is not baked into the code.
+		User interactions are defined by reassignable "Behavior" classes.
 	-->
 	<rx:Button x="100" y="100">
 		<rx:behaviors>
@@ -13,6 +13,9 @@
 			<behaviors:MovieClipSkinBehavior />
 			<rx:DragBehavior />
 		</rx:behaviors>
+		<rx:skin>
+			<components:ButtonGraphic />
+		</rx:skin>
 	</rx:Button>
 	
 </rx:Application>
