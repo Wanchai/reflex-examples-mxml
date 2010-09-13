@@ -9,7 +9,7 @@
 	xmlns:tl="flash.text.engine.*"
 	>
 	<fx:Metadata>
-		[HostComponent("reflex.components.Button")]
+		[HostComponent("reflex.components.ButtonDefinition")]
 	</fx:Metadata>
 	
 	<skins:states>

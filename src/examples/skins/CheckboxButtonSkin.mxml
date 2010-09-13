@@ -8,7 +8,7 @@
 	xmlns:tf="flash.text.*" xmlns:graphics="reflex.graphics.*" xmlns:states="reflex.states.*" xmlns:layouts="reflex.layouts.*" xmlns:display="reflex.display.*" 
 	>
 	<fx:Metadata>
-		[HostComponent("reflex.components.Button")]
+		[HostComponent("reflex.components.ButtonDefinition")]
 	</fx:Metadata>
 	
 	<skins:states>

@@ -7,7 +7,7 @@
 		In Reflex, component behavior is not baked into the code.
 		User interactions are defined by reassignable "Behavior" classes.
 	-->
-	<rx:Button x="100" y="100">
+	<rx:ButtonDefinition x="100" y="100">
 		<rx:behaviors>
 			<rx:ButtonBehavior />
 			<behaviors:MovieClipSkinBehavior />
@@ -16,6 +16,6 @@
 		<rx:skin>
 			<components:ButtonGraphic />
 		</rx:skin>
-	</rx:Button>
+	</rx:ButtonDefinition>
 	
 </rx:Application>
