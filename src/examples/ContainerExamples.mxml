@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rx:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:rx="http://rx.reflex.io/2010"
+	width="300" height="300" xmlns:s="library://ns.adobe.com/flex/spark">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<!--
+	Groups support percent-based and contraint-based layout.
+	-->
+	
+	<rx:HGroup width="100%">
+		
+		<!--
+		<rx:Rect height="20" width="100">
+			<rx:fill>
+				<s:SolidColor color="#FFFFFF" />
+			</rx:fill>
+		</rx:Rect>
+		<rx:Rect height="20" width="40">
+			<rx:fill>
+				<s:SolidColor color="#FFFFFF" />
+			</rx:fill>
+		</rx:Rect>
+		<rx:Rect height="20" width="20">
+			<rx:fill>
+				<s:SolidColor color="#FFFFFF" />
+			</rx:fill>
+		</rx:Rect>
+		-->
+	</rx:HGroup>
+	
+	<rx:HGroup >
+		<rx:VGroup>
+			
+		</rx:VGroup>
+	</rx:HGroup>
+	
+</rx:VGroup>

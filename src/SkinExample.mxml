@@ -12,8 +12,8 @@
 	<rx:layout>
 		<rx:HorizontalLayout />
 	</rx:layout>
-	
-	<rx:ButtonDefinition label="Hello Skinning 1">
+	<!--
+	<rx:ButtonBase label="Hello Skinning 1">
 		<rx:skin>
 			<components1:ButtonGraphic />
 		</rx:skin>
@@ -21,18 +21,18 @@
 			<rx:ButtonBehavior />
 			<behaviors:MovieClipSkinBehavior />
 		</rx:behaviors>
-	</rx:ButtonDefinition>
+	</rx:ButtonBase>
 	
-	<rx:ButtonDefinition label="Hello Skinning 2">
+	<rx:ButtonBase label="Hello Skinning 2">
 		<rx:skin>
 			<example:ExampleButtonSkin />
 		</rx:skin>
 		<rx:behaviors>
 			<rx:ButtonBehavior />
 		</rx:behaviors>
-	</rx:ButtonDefinition>
+	</rx:ButtonBase>
 	
-	<rx:ButtonDefinition label="Hello Skinning 3">
+	<rx:ButtonBase label="Hello Skinning 3">
 		<rx:skin>
 			<example:CheckboxButtonSkin />
 		</rx:skin>
@@ -40,6 +40,6 @@
 			<rx:ButtonBehavior />
 			<rx:SelectableBehavior />
 		</rx:behaviors>
-	</rx:ButtonDefinition>
-	
+	</rx:ButtonBase>
+	-->
 </rx:Application>

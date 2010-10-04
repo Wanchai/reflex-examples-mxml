@@ -11,7 +11,7 @@
 	<rx:layout>
 		<layouts:Grid960Layout />
 	</rx:layout>
-	
+	<!--
 	<rx:ButtonDefinition label="Hello Layouts 1" height="140" style="grid:12;suffix:12;" >
 		<rx:skin>
 			<skins:AnotherExampleButtonSkin />
@@ -107,4 +107,5 @@
 			<skins:AnotherExampleButtonSkin />
 		</rx:skin>
 	</rx:ButtonDefinition>
+	-->
 </rx:Application>

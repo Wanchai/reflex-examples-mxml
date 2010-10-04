@@ -9,25 +9,26 @@
 	
 	<fx:Declarations>
 		<!-- concrete classes are bindable (interfaces aren't) -->
-		<data:Position id="horizontalPosition" />
-		<data:Position id="verticalPosition" />
+		<data:ScrollPosition id="horizontalPosition" />
+		<data:ScrollPosition id="verticalPosition" />
 	</fx:Declarations>
 	
 	<rx:layout>
 		<rx:VerticalLayout />
 	</rx:layout>
 	
+	<!--
 	<rx:ScrollDisplay width="200" height="200" horizontal="{horizontalPosition}" vertical="{verticalPosition}" >
 		<rx:Image source="http://farm5.static.flickr.com/4060/4474881730_336af0f5fb.jpg" />
 	</rx:ScrollDisplay>
-	
+	-->
 	<rx:HScrollBar id="horizontalScrollBar" position="{horizontalPosition}" />
 	<rx:HScrollBar id="verticalScrollBar" position="{verticalPosition}" />
-	
+	<!--
 	<rx:Text text="horizontal - min: {horizontalPosition.min}, max: {horizontalPosition.max}, position: {Math.round(horizontalPosition.position)}" />
 	<rx:Text text="vertical - min: {verticalPosition.min}, max: {verticalPosition.max}, position: {Math.round(verticalPosition.position)}" />
-	
+	-->
 	<!-- imagine this is a reflex component taking horizontalPosition, shouldn't it go to max? Isn't that what max means? -->
-	<components:Knob minimum="{horizontalPosition.min}" maximum="{horizontalPosition.max}" value="{horizontalPosition.position}" />
+	<components:Knob minimum="{horizontalPosition.minimum}" maximum="{horizontalPosition.maximum}" value="{horizontalPosition.value}" />
 	
 </rx:Application>

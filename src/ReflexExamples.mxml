@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:rx="http://rx.reflex.io/2010" 
+				xmlns:layouts="examples.layouts.*" 
+				xmlns:skins="examples.skins.*" xmlns:s="library://ns.adobe.com/flex/spark">
+	
+	<fx:Script>
+		<![CDATA[
+			import examples.ButtonExamples;
+			import examples.ContainerExamples;
+			import examples.SliderExamples;
+			
+			private function generateExample(object:Object):* {
+				if(object != null) {
+					var C:Class = object.example;
+					var example:* = new C();
+					return example;
+				} else {
+					return null;
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		
+		<!-- Reflex Components -->
+		<rx:SimpleCollection id="examples">
+			<fx:Object label="Buttons" example="{ButtonExamples}" />
+			<fx:Object label="Sliders and Steppers" example="{SliderExamples}" />
+			<fx:Object label ="Lists" />
+			<fx:Object label="Containers" example="{ContainerExamples}" />
+			<fx:Object label="Scrolling" />
+			<fx:Object label="Skins" />
+			<fx:Object label="Behaviors" />
+			<fx:Object label="Layouts" />
+			<fx:Object label="Virtualization" />
+		</rx:SimpleCollection>
+		
+		<!-- Library (third-party) Components -->
+		<rx:SimpleCollection>
+			<fx:Object label="Text Layout Framework Components" />
+			<fx:Object label="TinyTLF Components" />
+		</rx:SimpleCollection>
+		
+	</fx:Declarations>
+	
+	<rx:layout>
+		<rx:HorizontalLayout />
+	</rx:layout>
+	
+	<rx:List dataProvider="{examples}" height="100%">
+		<rx:selection>
+			<rx:Selection id="exampleSelection" />
+		</rx:selection>
+	</rx:List>
+	
+	<rx:Group width="100%" height="100%">
+		<rx:Rect left="0" right="0" top="0" bottom="0">
+			<rx:fill>
+				<s:SolidColor color="#333333" />
+			</rx:fill>
+		</rx:Rect>
+		<rx:Text text="This entire application is 44kb." horizontalCenter="0" verticalCenter="0" />
+		<rx:Group content="{generateExample(exampleSelection.selectedItem)}" horizontalCenter="0" verticalCenter="0" />
+	</rx:Group>
+	
+</rx:Application>
