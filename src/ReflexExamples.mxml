@@ -3,7 +3,7 @@
 				xmlns:rx="http://rx.reflex.io/2010" 
 				xmlns:layouts="examples.layouts.*" 
 				xmlns:skins="examples.skins.*" 
-				xmlns:s="library://ns.adobe.com/flex/spark">
+				xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx">
 	
 	<fx:Script>
 		<![CDATA[
@@ -52,16 +52,24 @@
 	</fx:Declarations>
 	
 	<rx:layout>
-		<rx:HorizontalLayout />
+		<rx:HorizontalLayout edging="true" />
 	</rx:layout>
 	
-	<rx:List dataProvider="{examples}" height="100%">
-		<rx:selection>
-			<rx:Selection id="exampleSelection" />
-		</rx:selection>
-	</rx:List>
+	<rx:Group>
+		<rx:List dataProvider="{examples}" top="10">
+			<rx:selection>
+				<rx:Selection id="exampleSelection" />
+			</rx:selection>
+		</rx:List>
+	</rx:Group>
+	
 	
 	<rx:Group width="100%" height="100%">
+		<rx:Line top="0" bottom="0" left="0">
+			<rx:stroke>
+				<s:SolidColorStroke color="#000000" weight="2" />
+			</rx:stroke>
+		</rx:Line>
 		<rx:Rect left="0" right="0" top="0" bottom="0">
 			<rx:fill>
 				<s:SolidColor color="#EEEEEE" />

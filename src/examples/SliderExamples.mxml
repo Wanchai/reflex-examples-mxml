@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rx:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+<containers:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
 	xmlns:rx="http://rx.reflex.io/2010"
-	width="100%" height="100%">
+	width="100%" height="100%" xmlns:containers="reflex.containers.*">
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
@@ -9,11 +9,11 @@
 	<!--
 	Here are a few default Reflex Sliders.
 	-->
-	<rx:HGroup >
+	<containers:HGroup >
 		<rx:VSlider />
 		<rx:VScrollBar />	
-	</rx:HGroup>
+	</containers:HGroup>
 	<rx:HSlider />
 	<rx:HScrollBar />
 	
-</rx:VGroup>
+</containers:VGroup>

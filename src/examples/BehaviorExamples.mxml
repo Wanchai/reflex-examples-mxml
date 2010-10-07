@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rx:Application 
+<rx:Group
 	xmlns:fx="http://ns.adobe.com/mxml/2009" 
 	xmlns:rx="http://rx.reflex.io/2010" xmlns:behaviors="reflex.behaviors.*" xmlns:skins="examples.skins.*" xmlns:components="reflex.components.*">
 	
@@ -19,4 +19,4 @@
 		</rx:skin>
 	</rx:ButtonBase>
 	-->
-</rx:Application>
+</rx:Group>
