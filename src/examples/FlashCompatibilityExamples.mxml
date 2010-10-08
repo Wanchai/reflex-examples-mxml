@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rx:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:rx="http://rx.reflex.io/2010"
+	xmlns:minimal="com.bit101.components.*">
+	
+	<!--
+		Reflex containers can hold plain, everyday DisplayObjects.
+	-->
+	
+	<rx:HGroup horizontalCenter="0" verticalCenter="0">
+		<minimal:Label text="Hello" />
+		<minimal:PushButton label="Hello" />
+		<minimal:CheckBox label="Hello" />
+		<minimal:RadioButton label="Hello" />
+		<minimal:HScrollBar />
+		<minimal:HSlider />
+		<minimal:VScrollBar />
+		<minimal:VSlider />
+		<minimal:List />
+	</rx:HGroup>
+	
+</rx:Group>

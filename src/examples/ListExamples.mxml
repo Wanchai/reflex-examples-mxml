@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<containers:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
-	xmlns:rx="http://rx.reflex.io/2010"
-	width="100%" height="100%" xmlns:containers="reflex.containers.*">
+<rx:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:rx="http://rx.reflex.io/2010">
+	
 	<fx:Declarations>
 		<rx:SimpleCollection id="testData">
 			<fx:Object label="Ben Stucki" />
-			<fx:Object label="Ben Stucki" />
-			<fx:Object label="Ben Stucki" />
-			<fx:Object label="Ben Stucki" />
+			<fx:Object label="Tyler Wright" />
+			<fx:Object label="Jacob Wright" />
+			<fx:Object label="Ryan Campbell" />
+			<fx:Object label="Paul Taylor" />
+			<fx:Object label="Nate Beck" />
 		</rx:SimpleCollection>
 	</fx:Declarations>
 	
 	<!--
 	Here is a default list.
 	-->
-	<rx:List dataProvider="{testData}" />
 	
-</containers:VGroup>
+	<!-- dataProvider="{testData}" -->
+	<rx:List >
+		<rx:dataProvider>
+			<rx:SimpleCollection>
+				<fx:Object label="Ben Stucki" />
+				<fx:Object label="Tyler Wright" />
+				<fx:Object label="Jacob Wright" />
+				<fx:Object label="Ryan Campbell" />
+				<fx:Object label="Paul Taylor" />
+				<fx:Object label="Nate Beck" />
+			</rx:SimpleCollection>
+		</rx:dataProvider>
+	</rx:List>
+	
+</rx:Group>

@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<containers:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+<rx:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
 	xmlns:rx="http://rx.reflex.io/2010"
-	width="500" height="500" 
-	xmlns:s="library://ns.adobe.com/flex/spark" xmlns:containers="reflex.containers.*">
-	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
-	</fx:Declarations>
+	width="500" height="500">
 	
 	<!--
 	Groups support percent-based and contraint-based layout.
 	-->
 	
-	<containers:HGroup width="100%">
+	<rx:HGroup width="100%">
 		<rx:Button label="standard" />
 		<rx:Button label="100%" width="100%" />
 		<rx:Button label="standard" />
-	</containers:HGroup>
+	</rx:HGroup>
 	
-	<containers:HGroup width="100%" height="100%" >
-		<containers:VGroup height="100%">
+	<rx:HGroup width="100%" height="100%" >
+		<rx:VGroup height="100%">
 			<rx:Button label="standard" />
 			<rx:Button label="100%" height="100%" />
 			<rx:Button label="standard" />
-		</containers:VGroup>
+		</rx:VGroup>
 		<rx:Group width="100%" height="100%">
 			<rx:Button label="top, right constrained" right="0" top="0" />
-			<rx:Button label="centered" horizontalCenter="0" verticalCenter="0" />
+			<rx:Button label="centered" width="50%" height="50%" horizontalCenter="0" verticalCenter="0" />
 			<rx:Button label="bottom, left constrained" left="0" bottom="0" />
 		</rx:Group>
-	</containers:HGroup>
+	</rx:HGroup>
 	
-</containers:VGroup>
+</rx:VGroup>
