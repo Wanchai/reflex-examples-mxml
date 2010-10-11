@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rx:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+<rx:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
 			   xmlns:rx="http://rx.reflex.io/2010" 
-			   xmlns:example="examples.skins.*" xmlns:layouts="reflex.layouts.*" xmlns:flight="http://flight.flightxd.com/2009"
-			   width="480" height="800" xmlns:components="com.bit101.components.*" xmlns:components1="reflex.components.*" xmlns:behaviors="reflex.behaviors.*">
+			   xmlns:skins="examples.skins.*" 
+			   horizontalCenter="0" verticalCenter="0">
 	
 	<!--
-		In Reflex, a component's visual appearance is entirely defined by the skin
+		In Reflex, a component's visual appearance is entirely defined by the skin,
 		which may be reassigned at runtime. Skins can be a MovieClip or ISkin instance.
 	-->
 	
-	<rx:layout>
-		<rx:HorizontalLayout />
-	</rx:layout>
-	<!--
-	<rx:ButtonBase label="Hello Skinning 1">
-		<rx:skin>
-			<components1:ButtonGraphic />
-		</rx:skin>
-		<rx:behaviors>
-			<rx:ButtonBehavior />
-			<behaviors:MovieClipSkinBehavior />
-		</rx:behaviors>
-	</rx:ButtonBase>
+	<rx:Button label="Hello" />
 	
+	<rx:Button label="Example Button Skin">
+		<rx:skin>
+			<skins:ExampleButtonSkin />
+		</rx:skin>
+	</rx:Button>
+	<!--
 	<rx:ButtonBase label="Hello Skinning 2">
 		<rx:skin>
 			<example:ExampleButtonSkin />
@@ -42,4 +36,4 @@
 		</rx:behaviors>
 	</rx:ButtonBase>
 	-->
-</rx:Group>
+</rx:VGroup>

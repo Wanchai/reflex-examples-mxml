@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<skins:Skin
-	xmlns:components="reflex.components.*"
-	xmlns:fx="http://ns.adobe.com/mxml/2009"
-	xmlns:mx="library://ns.adobe.com/flex/mx"
-	xmlns:s="library://ns.adobe.com/flex/spark"
-	xmlns:skins="reflex.skins.*"
-	xmlns:tf="flash.text.*" xmlns:graphics="reflex.graphics.*" xmlns:states="reflex.states.*" xmlns:layouts="reflex.layouts.*" xmlns:display="reflex.display.*" 
-	>
+<rx:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:rx="http://rx.reflex.io/2010"
+	xmlns:s="library://ns.adobe.com/flex/spark">
 	<fx:Metadata>
 		[HostComponent("reflex.components.ButtonDefinition")]
 	</fx:Metadata>
 	
-	<skins:states>
-		<!--
+	<rx:states>
 		<s:State name="up" />
-		<s:State name="up"/>
 		<s:State name="over"/>
 		<s:State name="down"/>
-		-->
-	</skins:states>
+	</rx:states>
 	
-	<skins:layout>
-		<layouts:BasicLayout />
-	</skins:layout>
+	<rx:Rect left="0" right="0" top="0" bottom="0" radiusX="10" radiusY="10">
+		<rx:fill>
+			<rx:SolidColor color="#006699" color.over="#FF0000" color.down="#00FF00" />
+		</rx:fill>
+	</rx:Rect>
 	
-	<graphics:Rect left="0" right="0" top="0" bottom="0" radiusX="10" radiusY="10">
-		<graphics:fill>
-			<mx:SolidColor color="#006699" />
-		</graphics:fill>
-	</graphics:Rect>
+	<rx:Label id="label" fontSize="16" left="5" right="5" top="5" bottom="5" />
 	
-	<display:Text id="label" horizontalCenter="0" verticalCenter="0" defaultTextFormat="{new TextFormat(null, null, 0xFFFFFF, true, null, null, null, null, 'center')}" />
-	
-</skins:Skin>
+</rx:Skin>

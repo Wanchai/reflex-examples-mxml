@@ -4,11 +4,16 @@
 	
 	<fx:Script>
 		<![CDATA[
+			import examples.BehaviorExamples;
 			import examples.ButtonExamples;
 			import examples.ContainerExamples;
-			import examples.ListExamples;
-			import examples.SliderExamples;
+			import examples.CustomLayoutExamples;
 			import examples.FlashCompatibilityExamples;
+			import examples.ListExamples;
+			import examples.ScrollingExamples;
+			import examples.SkinExamples;
+			import examples.SliderExamples;
+			import examples.TextLayoutDisplayExamples;
 			
 			private function generateExample(object:Object):* {
 				if(object != null) {
@@ -32,23 +37,23 @@
 			<fx:Object label="Sliders &amp; Steppers" example="{SliderExamples}" />
 			<fx:Object label ="Lists" example="{ListExamples}" />
 			<fx:Object label="Containers" example="{ContainerExamples}" />
+			<fx:Object label="Srolling" example="{ScrollingExamples}" />
+			
+			<fx:Object label="Skinning" example="{SkinExamples}" />
+			<fx:Object label="Behaviors" example="{BehaviorExamples}" />
 			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
+			
+			<!-- ReflexLibrary Examples -->
+			<!--
+			<fx:Object label="Custom Layouts" example="{CustomLayoutExamples}" />
+			<fx:Object label="TLF Example" example="{TextLayoutDisplayExamples}" />
+			-->
 		</rx:SimpleCollection>
 		
-		<!-- Library (third-party) Components -->
 		<!--
-		<fx:Object label="Scrolling" />
-		<fx:Object label="Skins" />
-		<fx:Object label="Behaviors" />
-		<fx:Object label="Layouts" />
 		<fx:Object label="Virtualization" />
 		-->
-		<!--
-		<rx:SimpleCollection>
-			<fx:Object label="Text Layout Framework Components" />
-			<fx:Object label="TinyTLF Components" />
-		</rx:SimpleCollection>
-		-->
+		
 	</fx:Declarations>
 	
 	<rx:layout>
@@ -56,14 +61,14 @@
 	</rx:layout>
 	
 	<rx:Group height="100%">
-		<rx:List dataProvider="{examples}" top="10" left="10" right="10">
+		<rx:List dataProvider="{examples}" left="10" right="10" top="10">
 			<rx:selection>
 				<rx:Selection id="exampleSelection" />
 			</rx:selection>
 		</rx:List>
 	</rx:Group>
 	
-	<rx:Group width="100%" height="100%">
+	<rx:Group width="100%" height="100%" mask="{maskRect}">
 		<rx:Line top="0" bottom="0" left="0">
 			<rx:stroke>
 				<rx:SolidColorStroke color="#000000" weight="2" />
@@ -74,13 +79,12 @@
 				<rx:SolidColor color="#EEEEEE" />
 			</rx:fill>
 		</rx:Rect>
-		<rx:Group content="{generateExample(exampleSelection.selectedItem)}"  horizontalCenter="0" verticalCenter="0" />
+		<rx:Group content="{generateExample(exampleSelection.selectedItem)}" left="10" right="10" top="10" bottom="10" />
+		<rx:Rect id="maskRect" left="0" right="0" top="0" bottom="0">
+			<rx:fill>
+				<rx:SolidColor color="#000000" />
+			</rx:fill>
+		</rx:Rect>
 	</rx:Group>
 	
-	<!--
-	<examples:ButtonExamples />
-	<examples:SliderExamples />
-	<examples:ListExamples />
-	<examples:ContainerExamples />
-	-->
 </rx:Application>
