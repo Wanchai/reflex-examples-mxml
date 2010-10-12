@@ -4,7 +4,7 @@
 	horizontalCenter="0" verticalCenter="0">
 	
 	<fx:Declarations>
-		<rx:SimpleCollection id="testData">
+		<rx:SimpleCollection id="contributors">
 			<fx:Object label="Ben Stucki" />
 			<fx:Object label="Tyler Wright" />
 			<fx:Object label="Jacob Wright" />
@@ -15,21 +15,9 @@
 	</fx:Declarations>
 	
 	<!--
-	Here is a default list.
+		Lists? Ceck.
 	-->
 	
-	<!-- dataProvider="{testData}" -->
-	<rx:List >
-		<rx:dataProvider>
-			<rx:SimpleCollection>
-				<fx:Object label="Ben Stucki" />
-				<fx:Object label="Tyler Wright" />
-				<fx:Object label="Jacob Wright" />
-				<fx:Object label="Ryan Campbell" />
-				<fx:Object label="Paul Taylor" />
-				<fx:Object label="Nate Beck" />
-			</rx:SimpleCollection>
-		</rx:dataProvider>
-	</rx:List>
+	<rx:List dataProvider="{contributors}" />
 	
 </rx:Group>

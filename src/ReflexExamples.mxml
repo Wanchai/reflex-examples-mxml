@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
-				xmlns:rx="http://rx.reflex.io/2010" xmlns:examples="examples.*" >
+				xmlns:rx="http://rx.reflex.io/2010" 
+				xmlns:examples="examples.*" 
+				viewSourceURL="http://github.com/reflex/reflex-examples/tree/master/src" >
 	
 	<fx:Script>
 		<![CDATA[
@@ -13,6 +15,7 @@
 			import examples.ScrollingExamples;
 			import examples.SkinExamples;
 			import examples.SliderExamples;
+			import examples.StateExamples;
 			import examples.TextLayoutDisplayExamples;
 			
 			private function generateExample(object:Object):* {
@@ -31,28 +34,22 @@
 	<fx:Declarations>
 		
 		<!-- Reflex Components -->
-		
 		<rx:SimpleCollection id="examples">
 			<fx:Object label="Buttons &amp; Labels" example="{ButtonExamples}" />
 			<fx:Object label="Sliders &amp; Steppers" example="{SliderExamples}" />
 			<fx:Object label ="Lists" example="{ListExamples}" />
 			<fx:Object label="Containers" example="{ContainerExamples}" />
 			<fx:Object label="Srolling" example="{ScrollingExamples}" />
-			
 			<fx:Object label="Skinning" example="{SkinExamples}" />
 			<fx:Object label="Behaviors" example="{BehaviorExamples}" />
-			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
+			<fx:Object label="Sates" example="{StateExamples}" />
 			
-			<!-- ReflexLibrary Examples -->
-			<!--
+			<!-- 3rd Party (and Reflex Library) Examples -->
+			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
 			<fx:Object label="Custom Layouts" example="{CustomLayoutExamples}" />
 			<fx:Object label="TLF Example" example="{TextLayoutDisplayExamples}" />
-			-->
+
 		</rx:SimpleCollection>
-		
-		<!--
-		<fx:Object label="Virtualization" />
-		-->
 		
 	</fx:Declarations>
 	

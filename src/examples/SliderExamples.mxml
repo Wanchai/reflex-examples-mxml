@@ -4,7 +4,7 @@
 	horizontalCenter="0" verticalCenter="0">
 	
 	<!--
-	Here are a few default Reflex Sliders.
+		Reflex can haz Steppers, Sliders and ScrollBars?
 	-->
 	
 	<rx:HSlider />

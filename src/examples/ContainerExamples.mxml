@@ -4,7 +4,7 @@
 	width="100%" height="100%">
 	
 	<!--
-	Groups support percent-based and contraint-based layout.
+		Groups support percent-based and contraint-based layout. Awesome.
 	-->
 	
 	<rx:HGroup width="100%">

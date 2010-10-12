@@ -16,7 +16,8 @@
 	</fx:Script>
 	
 	<!--
-		Text Layout Framework Support
+		The Reflex Library project adds support for the Text Layout Framework.
+		Note that using this feature will add dependencies on the TLF framework (which is larger than all of Reflex!).
 	-->
 	
 	<text:TextLayoutDisplay text="{flow}" left="10" right="10" top="10" height="45%" />

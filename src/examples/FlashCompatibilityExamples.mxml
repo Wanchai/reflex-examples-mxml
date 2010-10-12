@@ -5,7 +5,7 @@
 	horizontalCenter="0" verticalCenter="0">
 	
 	<!--
-		Reflex containers can hold plain, everyday DisplayObjects.
+		Reflex containers can also hold plain, everyday DisplayObjects.
 	-->
 	
 	<rx:HGroup horizontalCenter="0" verticalCenter="0">

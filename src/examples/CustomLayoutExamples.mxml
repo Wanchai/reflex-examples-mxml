@@ -5,107 +5,107 @@
 			   xmlns:skins="examples.skins.*" width="960" height="700">
 	
 	<!--
-		Reflex also supports the use of entirely custom layouts.
+		Reflex supports the use of entirely custom, user-defined layouts and styles.
 	-->
 	
 	<rx:layout>
 		<layouts:Grid960Layout />
 	</rx:layout>
 	
-	<rx:ButtonDefinition label="Hello Layouts 1" height="140" style="grid:12;suffix:12;" >
+	<rx:Button label="Hello Layouts 1" height="140" style="grid:12;suffix:12;" >
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Hello Layouts 1" height="220" style="grid:7;">
+	<rx:Button label="Hello Layouts 1" height="220" style="grid:7;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Hello Layouts 2" height="220" style="grid:5;suffix:24;">
+	<rx:Button label="Hello Layouts 2" height="220" style="grid:5;suffix:24;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 1" height="60" style="grid:1;">
+	<rx:Button label="Link 1" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 2" height="60" style="grid:1;">
+	<rx:Button label="Link 2" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 3" height="60" style="grid:1;">
+	<rx:Button label="Link 3" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 4" height="60" style="grid:1;">
+	<rx:Button label="Link 4" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 5" height="60" style="grid:1;">
+	<rx:Button label="Link 5" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 6" height="60" style="grid:1;">
+	<rx:Button label="Link 6" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 7" height="60" style="grid:1;">
+	<rx:Button label="Link 7" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 8" height="60" style="grid:1;">
+	<rx:Button label="Link 8" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 9" height="60" style="grid:1;">
+	<rx:Button label="Link 9" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 10" height="60" style="grid:1;">
+	<rx:Button label="Link 10" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 11" height="60" style="grid:1;">
+	<rx:Button label="Link 11" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Link 12" height="60" style="grid:1;">
+	<rx:Button label="Link 12" height="60" style="grid:1;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
-	<rx:ButtonDefinition label="Footer" height="60" style="grid:12;">
+	<rx:Button label="Footer" height="60" style="grid:12;">
 		<rx:skin>
-			<skins:AnotherExampleButtonSkin />
+			<skins:ExampleButtonSkin />
 		</rx:skin>
-	</rx:ButtonDefinition>
+	</rx:Button>
 	
 </rx:Group>

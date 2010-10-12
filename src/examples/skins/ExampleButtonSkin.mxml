@@ -6,6 +6,10 @@
 		[HostComponent("reflex.components.ButtonDefinition")]
 	</fx:Metadata>
 	
+	<rx:layout>
+		<rx:BasicLayout />
+	</rx:layout>
+	
 	<rx:states>
 		<s:State name="up" />
 		<s:State name="over"/>

@@ -4,7 +4,7 @@
 	horizontalCenter="0" verticalCenter="0" >
 	
 	<!--
-	Here are a few default Reflex Buttons.
+		Reflex can haz Buttons and Labels?
 	-->
 	
 	<rx:Label text="Buttons &amp; Labels" fontSize="16" bold="true" />
