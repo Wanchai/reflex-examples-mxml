@@ -37,7 +37,7 @@
 		<rx:SimpleCollection id="examples">
 			<fx:Object label="Buttons &amp; Labels" example="{ButtonExamples}" />
 			<fx:Object label="Sliders &amp; Steppers" example="{SliderExamples}" />
-			<fx:Object label ="Lists" example="{ListExamples}" />
+			<fx:Object label="Lists" example="{ListExamples}" />
 			<fx:Object label="Containers" example="{ContainerExamples}" />
 			<fx:Object label="Srolling" example="{ScrollingExamples}" />
 			<fx:Object label="Skinning" example="{SkinExamples}" />
@@ -45,10 +45,11 @@
 			<fx:Object label="Sates" example="{StateExamples}" />
 			
 			<!-- 3rd Party (and Reflex Library) Examples -->
+			<!--
 			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
 			<fx:Object label="Custom Layouts" example="{CustomLayoutExamples}" />
 			<fx:Object label="TLF Example" example="{TextLayoutDisplayExamples}" />
-
+			-->
 		</rx:SimpleCollection>
 		
 	</fx:Declarations>

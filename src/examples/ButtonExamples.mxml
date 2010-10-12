@@ -8,8 +8,8 @@
 	-->
 	
 	<rx:Label text="Buttons &amp; Labels" fontSize="16" bold="true" />
-	<rx:Button label="Reflex Button" />
-	<rx:CheckBox label="Reflex Checkbox" />
-	<rx:RadioButton label="Reflex RadioButton" />
+	<rx:Button label="Button" />
+	<rx:CheckBox label="Checkbox" />
+	<rx:RadioButton label="RadioButton" />
 	
 </rx:VGroup>

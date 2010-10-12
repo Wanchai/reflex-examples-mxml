@@ -20,9 +20,9 @@
 			<rx:Button label="standard" />
 		</rx:VGroup>
 		<rx:Group width="100%" height="100%">
-			<rx:Button label="top, right constrained" right="0" top="0" />
+			<rx:Button label="top, right" right="0" top="0" />
 			<rx:Button label="centered" width="50%" height="50%" horizontalCenter="0" verticalCenter="0" />
-			<rx:Button label="bottom, left constrained" left="0" bottom="0" />
+			<rx:Button label="bottom, left" left="0" bottom="0" />
 		</rx:Group>
 	</rx:HGroup>
 	
