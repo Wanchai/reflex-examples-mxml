@@ -10,6 +10,7 @@
 			import examples.ButtonExamples;
 			import examples.ContainerExamples;
 			import examples.CustomLayoutExamples;
+			import examples.CustomListExamples;
 			import examples.FlashCompatibilityExamples;
 			import examples.ListExamples;
 			import examples.ScrollingExamples;
@@ -17,9 +18,11 @@
 			import examples.SliderExamples;
 			import examples.StateExamples;
 			import examples.TextLayoutDisplayExamples;
+			import examples.ThrowableListExamples;
 			
 			private function generateExample(object:Object):* {
 				if(object != null) {
+					group.visible = true;
 					var C:Class = object.example;
 					var example:* = new C();
 					return example;
@@ -44,6 +47,9 @@
 			<fx:Object label="Behaviors" example="{BehaviorExamples}" />
 			<fx:Object label="Sates" example="{StateExamples}" />
 			
+			<fx:Object label="Thowable List" example="{ThrowableListExamples}" />
+			<fx:Object label="Custom List" example="{CustomListExamples}" />
+			
 			<!-- 3rd Party (and Reflex Library) Examples -->
 			
 			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
@@ -55,18 +61,21 @@
 	</fx:Declarations>
 	
 	<rx:layout>
-		<rx:HorizontalLayout />
+		<rx:BasicLayout />
 	</rx:layout>
 	
-	<rx:Group height="100%">
-		<rx:List dataProvider="{examples}" left="10" right="10" top="10">
+	<!--<rx:Group left="0" right="0" top="40" bottom="0">-->
+		<rx:List dataProvider="{examples}" left="10" right="10" verticalCenter="0">
+			<rx:layout>
+				<rx:VerticalLayout gap="20" />
+			</rx:layout>
 			<rx:selection>
 				<rx:Selection id="exampleSelection" />
 			</rx:selection>
 		</rx:List>
-	</rx:Group>
+	<!--</rx:Group>-->
 	
-	<rx:Group width="100%" height="100%" mask="{maskRect}">
+	<rx:Group id="group" left="0" right="0" top="40" bottom="0" mask="{maskRect}" visible="false">
 		<rx:Line top="0" bottom="0" left="0">
 			<rx:stroke>
 				<rx:SolidColorStroke color="#000000" weight="2" />
@@ -83,6 +92,18 @@
 				<rx:SolidColor color="#000000" />
 			</rx:fill>
 		</rx:Rect>
+	</rx:Group>
+	
+	<rx:Group left="0" right="0" top="0" height="40">
+		<rx:Rect left="0" right="0" top="0" bottom="0">
+			<rx:fill>
+				<rx:SolidColor color="#333333" />
+			</rx:fill>
+		</rx:Rect>
+		
+		<rx:Label text="Reflex Examples" color="#FFFFFF" fontSize="16" horizontalCenter="0" verticalCenter="0" />
+		<rx:Button label="Back" click="group.visible = false" visible="{group.visible}" verticalCenter="0" left="5" />
+		
 	</rx:Group>
 	
 </rx:Application>

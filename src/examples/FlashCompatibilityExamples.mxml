@@ -8,7 +8,7 @@
 		Reflex containers can also hold plain, everyday DisplayObjects.
 	-->
 	
-	<rx:HGroup horizontalCenter="0" verticalCenter="0">
+	<rx:VGroup horizontalCenter="0" verticalCenter="0">
 		<minimal:Label text="Hello" />
 		<minimal:PushButton label="Hello" />
 		<minimal:CheckBox label="Hello" />
@@ -18,6 +18,6 @@
 		<minimal:VScrollBar />
 		<minimal:VSlider />
 		<minimal:List />
-	</rx:HGroup>
+	</rx:VGroup>
 	
 </rx:Group>

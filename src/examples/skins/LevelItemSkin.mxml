@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rx:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:rx="http://rx.reflex.io/2010"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	width="200" height="200">
+	<fx:Metadata>
+		[HostComponent("reflex.components.ListItemDefinition")]
+	</fx:Metadata>
+	
+	<rx:layout>
+		<rx:BasicLayout />
+	</rx:layout>
+	
+	<rx:states>
+		<s:State name="up" />
+		<s:State name="over"/>
+		<s:State name="down"/>
+	</rx:states>
+	
+	<rx:Rect left="0" right="0" top="0" bottom="0" radiusX="30" radiusY="30">
+		<rx:fill>
+			<rx:SolidColor color="#006699" color.over="#FF0000" color.down="#00FF00" />
+		</rx:fill>
+	</rx:Rect>
+	
+	<rx:BitmapImage width="200" height="200" mask="{imageMask}"
+					source="http://farm1.static.flickr.com/55/108489122_73915af6a0.jpg"  />
+	
+	<rx:Rect id="imageMask" left="5" right="5" top="5" bottom="5" radiusX="30" radiusY="30">
+		<rx:fill>
+			<rx:SolidColor color="#FFFFFF" />
+		</rx:fill>
+	</rx:Rect>
+	
+	<rx:Label id="label" fontSize="16" color="#FFFFFF" left="5" right="5" top="5" bottom="5" />
+	
+	
+	
+</rx:Skin>
