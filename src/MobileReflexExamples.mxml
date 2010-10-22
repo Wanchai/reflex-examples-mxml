@@ -51,11 +51,11 @@
 			<fx:Object label="Custom List" example="{CustomListExamples}" />
 			
 			<!-- 3rd Party (and Reflex Library) Examples -->
-			
+			<!--
 			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
 			<fx:Object label="Custom Layouts" example="{CustomLayoutExamples}" />
 			<fx:Object label="TLF Example" example="{TextLayoutDisplayExamples}" />
-			
+			-->
 		</rx:SimpleCollection>
 		
 	</fx:Declarations>

@@ -19,12 +19,12 @@
 	
 	<rx:Rect left="0" right="0" top="0" bottom="0" radiusX="30" radiusY="30">
 		<rx:fill>
-			<rx:SolidColor color="#006699" color.over="#FF0000" color.down="#00FF00" />
+			<rx:SolidColor color="#000000" color.over="#CCCCCC" color.down="#006699" />
 		</rx:fill>
 	</rx:Rect>
 	
-	<rx:BitmapImage width="200" height="200" mask="{imageMask}"
-					source="http://farm1.static.flickr.com/55/108489122_73915af6a0.jpg"  />
+	<rx:BitmapImage width="200" height="200" mask="{imageMask}" cacheAsBitmap="true"
+					source="http://farm3.static.flickr.com/2687/4343904938_55bdd5ac32.jpg"  />
 	
 	<rx:Rect id="imageMask" left="5" right="5" top="5" bottom="5" radiusX="30" radiusY="30">
 		<rx:fill>
@@ -32,8 +32,7 @@
 		</rx:fill>
 	</rx:Rect>
 	
-	<rx:Label id="label" fontSize="16" color="#FFFFFF" left="5" right="5" top="5" bottom="5" />
-	
-	
+	<rx:Label text="{label.text}" fontSize="36" color="#000000" left="7" right="3" top="7" bottom="3" />
+	<rx:Label id="label" fontSize="36" color="#FFFFFF" left="5" right="5" top="5" bottom="5" />
 	
 </rx:Skin>

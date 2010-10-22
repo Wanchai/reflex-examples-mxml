@@ -2,6 +2,9 @@ package examples.renderers
 {
 	import examples.skins.LevelItemSkin;
 	
+	import flash.geom.Matrix;
+	import flash.geom.Matrix3D;
+	
 	import reflex.behaviors.ButtonBehavior;
 	import reflex.behaviors.MovieClipSkinBehavior;
 	import reflex.behaviors.SelectBehavior;
@@ -21,6 +24,8 @@ package examples.renderers
 			Bind.addBinding(this, "skin.label.text", this, "data.name");
 			//measured.width = 120;
 			//measured.height = 120;
+			//this.cacheAsBitmap = true;
+			//this.cacheAsBitmapMatrix = new Matrix();
 		}
 	}
 }

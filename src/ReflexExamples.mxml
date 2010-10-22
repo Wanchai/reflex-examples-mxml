@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
 				xmlns:rx="http://rx.reflex.io/2010" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
 				xmlns:examples="examples.*" 
 				viewSourceURL="http://github.com/reflex/reflex-examples/tree/master/src" >
 	
@@ -10,6 +11,7 @@
 			import examples.ButtonExamples;
 			import examples.ContainerExamples;
 			import examples.CustomLayoutExamples;
+			import examples.CustomListExamples;
 			import examples.FlashCompatibilityExamples;
 			import examples.ListExamples;
 			import examples.ScrollingExamples;
@@ -17,6 +19,7 @@
 			import examples.SliderExamples;
 			import examples.StateExamples;
 			import examples.TextLayoutDisplayExamples;
+			import examples.ThrowableListExamples;
 			
 			private function generateExample(object:Object):* {
 				if(object != null) {
@@ -39,17 +42,20 @@
 			<fx:Object label="Sliders &amp; Steppers" example="{SliderExamples}" />
 			<fx:Object label="Lists" example="{ListExamples}" />
 			<fx:Object label="Containers" example="{ContainerExamples}" />
-			<fx:Object label="Srolling" example="{ScrollingExamples}" />
+			<fx:Object label="Scrolling" example="{ScrollingExamples}" />
 			<fx:Object label="Skinning" example="{SkinExamples}" />
 			<fx:Object label="Behaviors" example="{BehaviorExamples}" />
-			<fx:Object label="Sates" example="{StateExamples}" />
+			<fx:Object label="States" example="{StateExamples}" />
+			
+			<!--<fx:Object label="Throwable List" example="{ ThrowableListExamples}" />-->
+			<fx:Object label="Custom List" example="{CustomListExamples}" />
 			
 			<!-- 3rd Party (and Reflex Library) Examples -->
-			
+			<!--
 			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
 			<fx:Object label="Custom Layouts" example="{CustomLayoutExamples}" />
 			<fx:Object label="TLF Example" example="{TextLayoutDisplayExamples}" />
-			
+			-->
 		</rx:SimpleCollection>
 		
 	</fx:Declarations>
@@ -58,25 +64,31 @@
 		<rx:HorizontalLayout />
 	</rx:layout>
 	
-	<rx:Group height="100%">
+	<rx:Group height="100%" width="200">
 		<rx:List dataProvider="{examples}" left="10" right="10" top="10">
 			<rx:selection>
 				<rx:Selection id="exampleSelection" />
 			</rx:selection>
+			<rx:layout>
+				<rx:VerticalLayout gap="10" />
+			</rx:layout>
 		</rx:List>
 	</rx:Group>
 	
 	<rx:Group width="100%" height="100%" mask="{maskRect}">
+		<rx:Rect left="0" right="0" top="0" bottom="0">
+			<rx:fill>
+				<rx:RadialGradient>
+					<rx:GradientEntry color="#EEEEEE" />
+					<rx:GradientEntry color="#DDDDDD" />
+				</rx:RadialGradient>
+			</rx:fill>
+		</rx:Rect>
 		<rx:Line top="0" bottom="0" left="0">
 			<rx:stroke>
 				<rx:SolidColorStroke color="#000000" weight="2" />
 			</rx:stroke>
 		</rx:Line>
-		<rx:Rect left="0" right="0" top="0" bottom="0">
-			<rx:fill>
-				<rx:SolidColor color="#EEEEEE" />
-			</rx:fill>
-		</rx:Rect>
 		<rx:Group content="{generateExample(exampleSelection.selectedItem)}" left="10" right="10" top="10" bottom="10" />
 		<rx:Rect id="maskRect" left="0" right="0" top="0" bottom="0">
 			<rx:fill>

@@ -49,7 +49,7 @@
 		<rx:behaviors>
 			<behaviors:TouchScrollBehavior horizontalControl="false" />
 		</rx:behaviors>
-		<rx:List dataProvider="{levels}" width="100%"  />
+		<rx:List dataProvider="{levels}" width="100%" />
 	</rx:Scroller>
 	
 	<rx:VSlider position="{position}" right="0" top="0" bottom="0" />

@@ -9,7 +9,7 @@
 	
 	<rx:Label text="Buttons &amp; Labels" fontSize="16" bold="true" />
 	<rx:Button label="Button" />
-	<rx:CheckBox label="Checkbox" />
-	<rx:RadioButton label="RadioButton" />
+	<rx:CheckBox label="Check" />
+	<rx:RadioButton label="Radio" />
 	
 </rx:VGroup>

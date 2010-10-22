@@ -8,8 +8,6 @@
 	-->
 	
 	<rx:HSlider />
-	<rx:HScrollBar />
 	<rx:VSlider />
-	<rx:VScrollBar />
 	
 </rx:VGroup>

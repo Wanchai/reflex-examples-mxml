@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rx:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
 	xmlns:rx="http://rx.reflex.io/2010" 
+	xmlns:layouts="reflex.layouts.*" 
 	width="100%" height="100%" xmlns:behaviors="reflex.behaviors.*">
 	<fx:Script>
 		<![CDATA[
@@ -56,7 +57,7 @@
 		</rx:behaviors>
 		<rx:List dataProvider="{levels}" template="{LevelItem}" horizontalCenter="0">
 			<rx:layout>
-				<rx:VerticalLayout gap="20" />
+				<layouts:VerticalCoverFlowLayout vertical="{position}" gap="30" />
 			</rx:layout>
 		</rx:List>
 	</rx:Scroller>
