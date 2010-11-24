@@ -22,7 +22,7 @@
 		<rx:BitmapImage source="http://farm3.static.flickr.com/2766/4474105201_af63f79a2d_b.jpg" />
 	</rx:Scroller>
 	
-	<rx:HSlider id="horizontalScrollBar" position="{horizontalPosition}" />
-	<rx:HSlider id="verticalScrollBar" position="{verticalPosition}" />
+	<rx:HSlider id="horizontalScrollBar" position="{horizontalPosition}" width="100%" />
+	<rx:HSlider id="verticalScrollBar" position="{verticalPosition}" width="100%" />
 	
 </rx:VGroup>

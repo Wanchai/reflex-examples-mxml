@@ -3,7 +3,9 @@
 				xmlns:rx="http://rx.reflex.io/2010" 
 				xmlns:s="library://ns.adobe.com/flex/spark" 
 				xmlns:examples="examples.*" 
-				viewSourceURL="http://github.com/reflex/reflex-examples/tree/master/src" >
+				xmlns:hires="net.hires.debug.*"
+				initialize="init()" 
+				viewSourceURL="http://github.com/reflex/reflex-examples/tree/master/src" xmlns:skins="examples.skins.*" >
 	
 	<fx:Script>
 		<![CDATA[
@@ -20,6 +22,14 @@
 			import examples.StateExamples;
 			import examples.TextLayoutDisplayExamples;
 			import examples.ThrowableListExamples;
+			
+			import mx.core.IDataRenderer;
+			
+			import reflex.components.ListItem;
+			
+			private function init():void {
+				//addChild(stats);
+			}
 			
 			private function generateExample(object:Object):* {
 				if(object != null) {
@@ -47,17 +57,23 @@
 			<fx:Object label="Behaviors" example="{BehaviorExamples}" />
 			<fx:Object label="States" example="{StateExamples}" />
 			
-			<!--<fx:Object label="Throwable List" example="{ ThrowableListExamples}" />-->
+			<fx:Object label="Throwable List" example="{ThrowableListExamples}" />
 			<fx:Object label="Custom List" example="{CustomListExamples}" />
 			
 			<!-- 3rd Party (and Reflex Library) Examples -->
-			<!--
 			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
 			<fx:Object label="Custom Layouts" example="{CustomLayoutExamples}" />
 			<fx:Object label="TLF Example" example="{TextLayoutDisplayExamples}" />
-			-->
+			
 		</rx:SimpleCollection>
-		
+		<!--
+		<hires:Stats id="stats" scaleX="2" scaleY="2"/>
+		-->
+		<rx:ListItem id="renderer">
+			<rx:skin>
+				<skins:ExampleButtonSkin />
+			</rx:skin>
+		</rx:ListItem>
 	</fx:Declarations>
 	
 	<rx:layout>
@@ -65,7 +81,7 @@
 	</rx:layout>
 	
 	<rx:Group height="100%" width="200">
-		<rx:List dataProvider="{examples}" left="10" right="10" top="10">
+		<rx:List dataProvider="{examples}" template="{renderer}" left="10" right="10" top="10">
 			<rx:selection>
 				<rx:Selection id="exampleSelection" />
 			</rx:selection>

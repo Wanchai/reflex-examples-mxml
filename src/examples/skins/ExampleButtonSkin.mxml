@@ -3,7 +3,7 @@
 	xmlns:rx="http://rx.reflex.io/2010"
 	xmlns:s="library://ns.adobe.com/flex/spark">
 	<fx:Metadata>
-		[HostComponent("reflex.components.ButtonDefinition")]
+		//[HostComponent("reflex.components.ButtonDefinition")]
 	</fx:Metadata>
 	
 	<rx:layout>

@@ -18,6 +18,6 @@
 		Lists? Ceck.
 	-->
 	
-	<rx:List dataProvider="{contributors}" />
+	<rx:List dataProvider="{contributors}"  />
 	
 </rx:Group>
