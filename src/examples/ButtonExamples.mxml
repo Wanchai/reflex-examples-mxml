@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rx:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
 	xmlns:rx="http://rx.reflex.io/2010" 
-	horizontalCenter="0" verticalCenter="0" >
+	horizontalCenter="0" verticalCenter="0" horizontalAlign="center">
 	
 	<!--
 		Reflex can haz Buttons and Labels?
 	-->
 	
-	<rx:Label text="Buttons &amp; Labels" fontSize="16" bold="true" />
+	<rx:Label text="Buttons &amp; Labels" />
 	<rx:Button label="Button" />
-	<rx:CheckBox label="Check" />
-	<rx:RadioButton label="Radio" />
+	<rx:CheckBox label="Check Box" />
+	<rx:RadioButton label="Radio Button" />
 	
 </rx:VGroup>

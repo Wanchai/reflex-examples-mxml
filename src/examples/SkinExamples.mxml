@@ -2,7 +2,7 @@
 <rx:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
 			   xmlns:rx="http://rx.reflex.io/2010" 
 			   xmlns:skins="examples.skins.*" 
-			   horizontalCenter="0" verticalCenter="0">
+			   horizontalCenter="0" verticalCenter="0" horizontalAlign="center">
 	
 	<!--
 		In Reflex, a component's visual appearance is entirely defined by the skin,

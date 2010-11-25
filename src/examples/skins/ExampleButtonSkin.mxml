@@ -22,6 +22,6 @@
 		</rx:fill>
 	</rx:Rect>
 	
-	<rx:Label id="label" fontSize="16" left="5" right="5" top="5" bottom="5" />
+	<rx:Label id="label" color="#FFFFFF" color.over="#000000" color.down="#000000" fontSize="16" left="5" right="5" top="5" bottom="5" />
 	
 </rx:Skin>

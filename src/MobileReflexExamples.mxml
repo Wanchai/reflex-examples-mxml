@@ -64,16 +64,16 @@
 		<rx:BasicLayout />
 	</rx:layout>
 	
-	<!--<rx:Group left="0" right="0" top="40" bottom="0">-->
+	<rx:Scroller left="0" right="0" top="40" bottom="0">
+		<rx:behaviors>
+			<rx:TouchScrollBehavior horizontalControl="false" />
+		</rx:behaviors>
 		<rx:List dataProvider="{examples}" left="10" right="10" verticalCenter="0">
-			<rx:layout>
-				<rx:VerticalLayout gap="20" />
-			</rx:layout>
 			<rx:selection>
 				<rx:Selection id="exampleSelection" />
 			</rx:selection>
 		</rx:List>
-	<!--</rx:Group>-->
+	</rx:Scroller>
 	
 	<rx:Group id="group" left="0" right="0" top="40" bottom="0" mask="{maskRect}" visible="false">
 		<rx:Line top="0" bottom="0" left="0">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
 				xmlns:rx="http://rx.reflex.io/2010" 
-				xmlns:s="library://ns.adobe.com/flex/spark" 
 				xmlns:examples="examples.*" 
 				xmlns:hires="net.hires.debug.*"
+				xmlns:skins="examples.skins.*" 
 				initialize="init()" 
-				viewSourceURL="http://github.com/reflex/reflex-examples/tree/master/src" xmlns:skins="examples.skins.*" >
+				viewSourceURL="http://github.com/reflex/reflex-examples/tree/master/src">
 	
 	<fx:Script>
 		<![CDATA[
@@ -71,17 +71,17 @@
 		-->
 		<rx:ListItem id="renderer">
 			<rx:skin>
-				<skins:ExampleButtonSkin />
+				<skins:MenuItemSkin />
 			</rx:skin>
 		</rx:ListItem>
 	</fx:Declarations>
 	
 	<rx:layout>
-		<rx:HorizontalLayout />
+		<rx:HorizontalLayout gap="0" />
 	</rx:layout>
 	
 	<rx:Group height="100%" width="200">
-		<rx:List dataProvider="{examples}" template="{renderer}" left="10" right="10" top="10">
+		<rx:List dataProvider="{examples}" template="{renderer}" left="10" right="0" top="10">
 			<rx:selection>
 				<rx:Selection id="exampleSelection" />
 			</rx:selection>
