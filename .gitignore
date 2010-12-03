@@ -3,6 +3,8 @@
 .flexProperties
 .project
 .settings
+bin
 bin-debug
 bin-release
 html-template
+build.properties

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<project name="Reflex Android Demo" basedir="." default="all">
+
+	<!-- Define variables/paths used in this build script -->
+	<property file="build.properties" />
+	<property name="FLEX_HOME" value="${flex-sdk.dir}" />
+	
+	<!-- Define tasks used in this build script -->
+	<taskdef resource="flexTasks.tasks" classpath="${flex-sdk.dir}/ant/lib/flexTasks.jar"/>
+	
+	<target name="all">
+		<antcall target="init" />
+		<antcall target="clean" />
+		<antcall target="compile" />
+	</target>
+	
+	<target name="init">
+		<mkdir dir="${bin.dir}"/>
+	</target>
+	
+	<target name="clean">
+		<delete includeemptydirs="true" failonerror="false">
+			<fileset dir="${bin.dir}" defaultexcludes="false">
+				<include name="**/*"/>
+			</fileset>
+		</delete>
+	</target>
+	
+	<!--
+		Compile all of the classes under the "src" tree into a .swc file
+	-->
+	<target name="compile">
+		
+		<mxmlc file="src/ReflexExamples.mxml" output="${bin.dir}/ReflexExamples.swf" optimize="true" locale="en_US" configname="air">
+			<source-path path-element="${src.dir}" />
+			<!--
+			<source-path path-element="../ReflexFramework/src" />
+			<source-path path-element="../ReflexComponents/src" />
+			<namespace uri="http://rx.reflex.io/2010" manifest="../ReflexFramework/src/manifest.xml" />
+			<namespace uri="http://rx.reflex.io/2010" manifest="../ReflexComponents/src/manifest.xml" />
+			-->
+			<library-path dir="${FLEX_HOME}/frameworks/libs" append="true">
+				<include name="*.swc" />
+			</library-path>
+			<library-path dir="${FLEX_HOME}/frameworks/libs/air" append="true">
+				<include name="*.swc" />
+			</library-path>
+			<library-path dir="${FLEX_HOME}/frameworks/locale" append="true">
+				<include name="{locale}" />
+			</library-path>
+			<library-path dir="${lib.dir}" append="true">
+				<include name="*.swc" />
+			</library-path>
+		</mxmlc>
+		
+		<!--
+		adt -package -target apk -storetype pkcs12 -keystore ../demos.p12 ReflexAndroidDemo.apk ReflexAndroidDemo.air
+		-->
+	</target>
+	
+	<target name="compile-apk">
+		<exec executable="adt"  failonerror="true">
+			<arg line="-package -target apk -storetype pkcs12 -keystore ../testing.p12 bin/ReflexExamples.apk bin/ReflexExamples.air" />
+		</exec>
+	</target>
+	
+	<target name="deploy">
+		<exec executable="adb"  failonerror="true">
+			<arg line="-d install -r AnalogTuner.apk" />
+		</exec>
+	</target>
+	
+	<!--
+	sudo ./packagerforiphone_v2_mac_101110/bin/pfi -package -target ipa-ad-hoc -provisioning-profile AnalogTuner_Provision.mobileprovision -storetype pkcs12 -keystore DeveloperCertificate.p12 -storepass **** AnalogTuner.ipa ../DigitalAnalog/AnalogTuner/src/AnalogTuner-iOS-app.xml -C ../DigitalAnalog/AnalogTuner/bin AnalogTuner.swf AnalogTuner_128x128.png
+	-->
+	
+</project>
