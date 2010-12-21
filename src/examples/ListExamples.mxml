@@ -10,7 +10,6 @@
 			<fx:Object label="Jacob Wright" />
 			<fx:Object label="Ryan Campbell" />
 			<fx:Object label="Paul Taylor" />
-			<fx:Object label="Nate Beck" />
 		</rx:SimpleCollection>
 	</fx:Declarations>
 	

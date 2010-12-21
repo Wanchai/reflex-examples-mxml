@@ -54,7 +54,7 @@
 			<keep-as3-metadata name="Binding" />
 			<keep-as3-metadata name="EventListener" />
 			<keep-as3-metadata name="LayoutProperty" />
-			<keep-as3-metadata name="CommitProperties" />
+			<keep-as3-metadata name="Commit" />
 		</mxmlc>
 		
 		<!--

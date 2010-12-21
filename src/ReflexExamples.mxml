@@ -9,6 +9,7 @@
 	
 	<fx:Script>
 		<![CDATA[
+			
 			import examples.BehaviorExamples;
 			import examples.ButtonExamples;
 			import examples.ContainerExamples;
@@ -23,6 +24,8 @@
 			import examples.TextLayoutDisplayExamples;
 			import examples.ThrowableListExamples;
 			
+			import flash.utils.getQualifiedClassName;
+			
 			import mx.core.IDataRenderer;
 			
 			import reflex.components.ListItem;
@@ -35,10 +38,38 @@
 				if(object != null) {
 					var C:Class = object.example;
 					var example:* = new C();
+					
+					var contextMenu:ContextMenu = new ContextMenu();
+					var viewAS3:ContextMenuItem = new ContextMenuItem("View Source as AS3", true);
+					var viewMXML:ContextMenuItem = new ContextMenuItem("View Source as MXML", true);
+					if(object.as3 == true) {
+						contextMenu.customItems.push(viewAS3);
+					}
+					contextMenu.customItems.push(viewMXML);
+					
+					viewAS3.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, menuItemSelectHandlerAS3);
+					viewMXML.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, menuItemSelectHandlerMXML);
+					
+					contextMenu.hideBuiltInItems();
+					group.contextMenu = contextMenu;
 					return example;
 				} else {
 					return null;
 				}
+			}
+			
+			private function menuItemSelectHandlerAS3(event:ContextMenuEvent):void {
+				var s:String = flash.utils.getQualifiedClassName(exampleContainer.content.getItemAt(0));
+				var url:String = "https://github.com/reflex/reflex-examples-as3/blob/master/src/examples/" + s.split("::")[1] + ".as";
+				var request:URLRequest = new URLRequest(url);
+				navigateToURL(request, "_blank");
+			}
+			
+			private function menuItemSelectHandlerMXML(event:ContextMenuEvent):void {
+				var s:String = flash.utils.getQualifiedClassName(exampleContainer.content.getItemAt(0));
+				var url:String = "https://github.com/reflex/reflex-examples-mxml/blob/master/src/examples/" + s.split("::")[1] + ".mxml";
+				var request:URLRequest = new URLRequest(url);
+				navigateToURL(request, "_blank");
 			}
 			
 		]]>
@@ -48,22 +79,22 @@
 		
 		<!-- Reflex Components -->
 		<rx:SimpleCollection id="examples">
-			<fx:Object label="Buttons &amp; Labels" example="{ButtonExamples}" />
-			<fx:Object label="Sliders &amp; Steppers" example="{SliderExamples}" />
-			<fx:Object label="Lists" example="{ListExamples}" />
-			<fx:Object label="Containers" example="{ContainerExamples}" />
-			<fx:Object label="Scrolling" example="{ScrollingExamples}" />
-			<fx:Object label="Skinning" example="{SkinExamples}" />
-			<fx:Object label="Behaviors" example="{BehaviorExamples}" />
-			<fx:Object label="States" example="{StateExamples}" />
+			<fx:Object label="Buttons &amp; Labels" example="{ButtonExamples}" as3="true" />
+			<fx:Object label="Sliders &amp; Steppers" example="{SliderExamples}" as3="true" />
+			<fx:Object label="Lists" example="{ListExamples}" as3="true" />
+			<fx:Object label="Containers" example="{ContainerExamples}" as3="true" />
+			<fx:Object label="Scrolling" example="{ScrollingExamples}" as3="true" />
+			<fx:Object label="Skinning" example="{SkinExamples}" as3="true" />
+			<fx:Object label="Behaviors" example="{BehaviorExamples}" as3="true" />
+			<fx:Object label="States" example="{StateExamples}" as3="false" />
 			
-			<fx:Object label="Throwable List" example="{ThrowableListExamples}" />
-			<fx:Object label="Custom List" example="{CustomListExamples}" />
+			<fx:Object label="Throwable List" example="{ThrowableListExamples}" as3="true" />
+			<fx:Object label="Custom List" example="{CustomListExamples}" as3="false" />
 			
 			<!-- 3rd Party (and Reflex Library) Examples -->
-			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" />
-			<fx:Object label="Custom Layouts" example="{CustomLayoutExamples}" />
-			<fx:Object label="TLF Example" example="{TextLayoutDisplayExamples}" />
+			<fx:Object label="Flash Compatibility" example="{FlashCompatibilityExamples}" as3="false" />
+			<fx:Object label="Custom Layouts" example="{CustomLayoutExamples}" as3="false" />
+			<fx:Object label="TLF Example" example="{TextLayoutDisplayExamples}" as3="false" />
 			
 		</rx:SimpleCollection>
 		<!--
@@ -91,7 +122,7 @@
 		</rx:List>
 	</rx:Group>
 	
-	<rx:Group width="100%" height="100%" mask="{maskRect}">
+	<rx:Group id="group" width="100%" height="100%" mask="{maskRect}">
 		<rx:Rect left="0" right="0" top="0" bottom="0">
 			<rx:fill>
 				<rx:RadialGradient>
@@ -105,7 +136,7 @@
 				<rx:SolidColorStroke color="#000000" weight="2" />
 			</rx:stroke>
 		</rx:Line>
-		<rx:Group content="{generateExample(exampleSelection.selectedItem)}" left="10" right="10" top="10" bottom="10" />
+		<rx:Group id="exampleContainer" content="{generateExample(exampleSelection.selectedItem)}" left="10" right="10" top="10" bottom="10" />
 		<rx:Rect id="maskRect" left="0" right="0" top="0" bottom="0">
 			<rx:fill>
 				<rx:SolidColor color="#000000" />
