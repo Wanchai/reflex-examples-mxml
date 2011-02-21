@@ -6,7 +6,6 @@ package examples.renderers
 	import flash.geom.Matrix3D;
 	
 	import reflex.behaviors.ButtonBehavior;
-	import reflex.behaviors.MovieClipSkinBehavior;
 	import reflex.behaviors.SelectBehavior;
 	import reflex.binding.Bind;
 	import reflex.components.ListItemDefinition;
@@ -17,7 +16,6 @@ package examples.renderers
 		{
 			super();
 			skin = new LevelItemSkin();
-			behaviors.addItem(new MovieClipSkinBehavior(this));
 			behaviors.addItem(new ButtonBehavior(this));
 			behaviors.addItem(new SelectBehavior(this));
 			Bind.addBinding(this, "skin.label.text", this, "data.label");

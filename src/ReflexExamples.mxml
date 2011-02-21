@@ -4,12 +4,10 @@
 				xmlns:examples="examples.*" 
 				xmlns:hires="net.hires.debug.*"
 				xmlns:skins="examples.skins.*" 
-				initialize="init()" 
-				viewSourceURL="http://github.com/reflex/reflex-examples/tree/master/src">
+				initialize="init()" >
 	
 	<fx:Script>
 		<![CDATA[
-			
 			import examples.BehaviorExamples;
 			import examples.ButtonExamples;
 			import examples.ContainerExamples;
@@ -21,6 +19,7 @@
 			import examples.SkinExamples;
 			import examples.SliderExamples;
 			import examples.StateExamples;
+			import examples.TextExamples;
 			import examples.TextLayoutDisplayExamples;
 			import examples.ThrowableListExamples;
 			
@@ -31,6 +30,7 @@
 			import reflex.components.ListItem;
 			
 			private function init():void {
+				//var stats:Stats = new Stats();
 				//addChild(stats);
 			}
 			
@@ -80,6 +80,7 @@
 		<!-- Reflex Components -->
 		<rx:SimpleCollection id="examples">
 			<fx:Object label="Buttons &amp; Labels" example="{ButtonExamples}" as3="true" />
+			<!--<fx:Object label="Text" example="{TextExamples}" as3="false" />-->
 			<fx:Object label="Sliders &amp; Steppers" example="{SliderExamples}" as3="true" />
 			<fx:Object label="Lists" example="{ListExamples}" as3="true" />
 			<fx:Object label="Containers" example="{ContainerExamples}" as3="true" />

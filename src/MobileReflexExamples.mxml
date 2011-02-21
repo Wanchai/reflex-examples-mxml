@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
 				xmlns:rx="http://rx.reflex.io/2010" 
-				xmlns:examples="examples.*" 
-				viewSourceURL="http://github.com/reflex/reflex-examples/tree/master/src" >
+				xmlns:examples="examples.*" >
 	
 	<fx:Script>
 		<![CDATA[
