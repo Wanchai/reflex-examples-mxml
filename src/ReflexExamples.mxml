@@ -19,7 +19,7 @@
 			import examples.SkinExamples;
 			import examples.SliderExamples;
 			import examples.StateExamples;
-			import examples.TextExamples;
+			//import examples.TextExamples;
 			import examples.TextLayoutDisplayExamples;
 			import examples.ThrowableListExamples;
 			
