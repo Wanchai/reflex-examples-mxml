@@ -8,3 +8,9 @@ bin-debug
 bin-release
 html-template
 build.properties
+obj
+lib
+bin
+_src
+ReflexSkin.as3proj
+ReflexSkin.lxml
