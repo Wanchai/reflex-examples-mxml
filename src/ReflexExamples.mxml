@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
-				xmlns:rx="http://rx.reflex.io/2010" 
-				xmlns:examples="examples.*" 
+<rx:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:rx="http://rx.reflex.io/2010"
+				xmlns:examples="examples.*"
 				xmlns:hires="net.hires.debug.*"
-				xmlns:skins="examples.skins.*" 
+				xmlns:skins="examples.skins.*"
 				initialize="init()" >
 	
 	<fx:Script>
@@ -29,9 +29,14 @@
 			
 			import reflex.components.ListItem;
 			
+			import flash.text.Font;
+			import fonts.*;
+			
 			private function init():void {
 				//var stats:Stats = new Stats();
 				//addChild(stats);
+				
+				Font.registerFont(Ge);
 			}
 			
 			private function generateExample(object:Object):* {
@@ -113,25 +118,21 @@
 	</rx:layout>
 	
 	<rx:Group height="100%" width="200">
-		<rx:List dataProvider="{examples}" template="{renderer}" left="10" right="0" top="10">
+		<rx:BitmapImage source="@Embed(source='examples/skins/assets/menu_03.png')" right="0" top="0" />
+		<rx:BitmapImage source="@Embed(source='examples/skins/assets/menu_11.png')" right="0" bottom="0" />
+		
+		<rx:List dataProvider="{examples}" template="{renderer}" right="0" top="15">
 			<rx:selection>
 				<rx:Selection id="exampleSelection" />
 			</rx:selection>
 			<rx:layout>
-				<rx:VerticalLayout gap="10" />
+				<rx:VerticalLayout gap="0" />
 			</rx:layout>
 		</rx:List>
+		
 	</rx:Group>
 	
 	<rx:Group id="group" width="100%" height="100%" mask="{maskRect}">
-		<rx:Rect left="0" right="0" top="0" bottom="0">
-			<rx:fill>
-				<rx:RadialGradient>
-					<rx:GradientEntry color="#EEEEEE" />
-					<rx:GradientEntry color="#DDDDDD" />
-				</rx:RadialGradient>
-			</rx:fill>
-		</rx:Rect>
 		<rx:Line top="0" bottom="0" left="0">
 			<rx:stroke>
 				<rx:SolidColorStroke color="#000000" weight="2" />

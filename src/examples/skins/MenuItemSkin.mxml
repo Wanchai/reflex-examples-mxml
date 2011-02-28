@@ -20,16 +20,13 @@
 		<s:State name="disabled"/>
 	</rx:states>
 	
-	<rx:Rect left="0" right="0" top="0" bottom="0" radiusX="{hostComponent.selected ? 0 : 0}" radiusY="{hostComponent.selected ? 0 : 0}">
-		<rx:fill>
-			<rx:SolidColor color="#FFFFFF" color.over="#006699" color.down="#006699" 
-				color.selectedUp="#DDDDDD" color.selectedOver="#DDDDDD" color.selectedDown="#DDDDDD"/>
-		</rx:fill>
-	</rx:Rect>
+	<rx:BitmapImage source="@Embed(source='assets/menu_07.png')" includeIn="up" />
+	<rx:BitmapImage source="@Embed(source='assets/menu_08.png')" includeIn="over" />
+	<rx:BitmapImage source="@Embed(source='assets/menu_08.png')" includeIn="down" />
 	
-	<rx:Label id="label" 
-			  color="#000000" color.over="#FFFFFF" color.down="#FFFFFF" 
-			  color.selectedUp="#000000" color.selectedOver="#000000" color.selectedDown="#000000" 
-			  fontSize="18" left="0" right="10" top="10" bottom="10" />
+	<rx:Label id="label"
+			  color="#000000" color.over="#818181" color.down="#000000"
+			  color.selectedUp="#000000" color.selectedOver="#000000" color.selectedDown="#000000"
+			  fontSize="15" right="21" top="13" fontFamily="Georgia" />
 	
 </rx:Skin>
